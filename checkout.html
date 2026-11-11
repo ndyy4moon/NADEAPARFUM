@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | NADÉA PARFUM</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: #fffaf8;
+        }
+
+        .checkout-container {
+            max-width: 1150px;
+            margin: 65px auto;
+            padding: 25px;
+        }
+
+        .checkout-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .checkout-heading p {
+            color: #b77b86;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 4px;
+        }
+
+        .checkout-heading h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 500;
+            color: #553d42;
+            margin-top: 12px;
+        }
+
+        .checkout-layout {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 35px;
+            align-items: start;
+        }
+
+        .checkout-form,
+        .order-summary {
+            background: #fff;
+            border: 1px solid #f0dfdc;
+            padding: 32px;
+            border-radius: 4px;
+        }
+
+        .checkout-form h2,
+        .order-summary h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 500;
+            color: #553d42;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 23px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 9px;
+            color: #765e5b;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #eadbd7;
+            background: #fffdfc;
+            color: #593f43;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            box-sizing: border-box;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #b77b86;
+        }
+
+        .form-group textarea {
+            min-height: 115px;
+            resize: vertical;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #b6a2a0;
+        }
+
+        .order-summary {
+            position: sticky;
+            top: 30px;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 18px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f3e9e6;
+            color: #806b6d;
+            font-size: 13px;
+        }
+
+        .order-total {
+            border-top: 1px solid #eadbd7;
+            padding-top: 22px;
+            margin-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            font-weight: 700;
+            color: #553d42;
+            font-size: 18px;
+        }
+
+        .place-order-btn {
+            width: 100%;
+            padding: 16px;
+            margin-top: 28px;
+            background: #b77b86;
+            color: white;
+            border: none;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .place-order-btn:hover {
+            background: #8e5d67;
+        }
+
+        @media (max-width: 750px) {
+            .checkout-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .order-summary {
+                position: static;
+            }
+
+            .checkout-heading h1 {
+                font-size: 33px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .checkout-container {
+                padding: 15px;
+            }
+
+            .checkout-form,
+            .order-summary {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="announcement">
+        Discover Your Signature Scent ✨
+    </div>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="img/logo-nadea.png" alt="NADÉA PARFUM">
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">My Bag</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="orders.html">My Orders</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main class="checkout-container">
+
+        <div class="checkout-heading">
+            <p>ALMOST YOURS</p>
+            <h1>Checkout</h1>
+        </div>
+
+        <div class="checkout-layout">
+
+            <form class="checkout-form" id="checkout-form">
+
+                <h2>Shipping Information</h2>
+
+                <div class="form-group">
+                    <label for="nama">Full Name</label>
+                    <input
+                        type="text"
+                        id="nama"
+                        required
+                        placeholder="Masukkan nama lengkap">
+                </div>
+
+                <div class="form-group">
+                    <label for="telepon">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="telepon"
+                        required
+                        placeholder="Masukkan nomor HP">
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Complete Address</label>
+                    <textarea
+                        id="alamat"
+                        required
+                        placeholder="Masukkan alamat lengkap"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="pembayaran">Payment Method</label>
+                    <select id="pembayaran" required>
+                        <option value="">Pilih metode pembayaran</option>
+                        <option value="Transfer Bank">Transfer Bank</option>
+                        <option value="E-Wallet">E-Wallet</option>
+                        <option value="COD">Cash on Delivery (COD)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="place-order-btn">
+                    PLACE ORDER
+                </button>
+
+            </form>
+
+            <aside class="order-summary">
+
+                <h2>Order Summary</h2>
+
+                <div id="checkout-items"></div>
+
+                <div class="order-total">
+                    <span>Total</span>
+                    <span id="checkout-total">Rp0</span>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer id="contact">
+        <h2>NADÉA PARFUM</h2>
+        <p>A Scent Called You.</p>
+        <p>© 2026 NADÉA PARFUM. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/checkout.js"></script>
+
+</body>
+</html>

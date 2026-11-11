@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Bag | NADÉA PARFUM</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: #fffaf8;
+        }
+
+        .cart-container {
+            max-width: 1150px;
+            margin: 65px auto;
+            padding: 25px;
+        }
+
+        .cart-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .cart-heading p {
+            color: #b77b86;
+            font-size: 11px;
+            letter-spacing: 4px;
+            font-weight: 600;
+        }
+
+        .cart-heading h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 500;
+            color: #553d42;
+            margin-top: 12px;
+        }
+
+        .cart-layout {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+            gap: 35px;
+            align-items: start;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding: 22px;
+            background: #fff;
+            border: 1px solid #f0dfdc;
+            border-radius: 4px;
+        }
+
+        .cart-item img {
+            width: 115px;
+            height: 125px;
+            object-fit: contain;
+            background: #fff6f3;
+            padding: 8px;
+        }
+
+        .item-info {
+            flex: 1;
+        }
+
+        .item-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 19px;
+            font-weight: 500;
+            color: #553d42;
+            margin-bottom: 8px;
+        }
+
+        .item-info p {
+            font-size: 13px;
+            color: #9b8585;
+            margin-bottom: 10px;
+        }
+
+        .item-price {
+            color: #ae7880;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .quantity-control button {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #e5c9c8;
+            background: #fff8f6;
+            color: #805c62;
+            cursor: pointer;
+        }
+
+        .remove-btn {
+            display: inline-block;
+            border: none;
+            background: none;
+            color: #b77b86;
+            font-size: 12px;
+            margin-top: 12px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .cart-summary {
+            background: #fff;
+            border: 1px solid #f0dfdc;
+            padding: 30px;
+            border-radius: 4px;
+            position: sticky;
+            top: 30px;
+        }
+
+        .cart-summary h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 500;
+            color: #553d42;
+            margin-bottom: 28px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 20px;
+            color: #8b7475;
+            font-size: 14px;
+        }
+
+        .summary-total {
+            border-top: 1px solid #eadbd7;
+            padding-top: 22px;
+            font-size: 17px;
+            font-weight: 700;
+            color: #553d42;
+        }
+
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin-top: 28px;
+            background: #b77b86;
+            color: white;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background: #8e5d67;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 65px 20px;
+            background: #fff;
+            border: 1px solid #f0dfdc;
+            color: #806b6d;
+        }
+
+        .empty-cart h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            color: #553d42;
+            margin-bottom: 12px;
+        }
+
+        .empty-cart a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #ae7880;
+        }
+
+        @media (max-width: 750px) {
+            .cart-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-heading h1 {
+                font-size: 32px;
+            }
+
+            .cart-summary {
+                position: static;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cart-container {
+                padding: 15px;
+            }
+
+            .cart-item {
+                gap: 12px;
+                padding: 12px;
+            }
+
+            .cart-item img {
+                width: 85px;
+                height: 105px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="announcement">
+        Discover Your Signature Scent ✨
+    </div>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="img/logo-nadea.png" alt="NADÉA PARFUM">
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">My Bag</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="orders.html">My Orders</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+
+        <div class="cart-heading">
+            <p>YOUR SELECTION</p>
+            <h1>My Shopping Bag</h1>
+        </div>
+
+        <div class="cart-layout">
+
+            <section>
+                <div id="cart-items" class="cart-items"></div>
+            </section>
+
+            <aside class="cart-summary">
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Total Items</span>
+                    <span id="total-items">0</span>
+                </div>
+
+                <div class="summary-row summary-total">
+                    <span>Total</span>
+                    <span id="cart-total">Rp0</span>
+                </div>
+
+                <a href="checkout.html" class="checkout-btn">
+                    PROCEED TO CHECKOUT
+                </a>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer id="contact">
+        <h2>NADÉA PARFUM</h2>
+        <p>A Scent Called You.</p>
+        <p>© 2026 NADÉA PARFUM. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+
+</body>
+</html>

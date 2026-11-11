@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | NADÉA PARFUM</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="announcement">
+        Discover Your Signature Scent ✨
+    </div>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="img/logo-nadea.png" alt="NADÉA PARFUM">
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <a href="cart.html" class="nav-button">My Bag</a>
+    </header>
+
+    <main class="shop-page">
+
+        <section class="shop-heading">
+            <p>EXPLORE OUR COLLECTION</p>
+            <h1>Find Your Signature Scent</h1>
+            <span>Discover a fragrance that tells your story.</span>
+        </section>
+
+        <section class="shop-tools">
+
+            <input
+                type="text"
+                id="search-product"
+                placeholder="Search your favorite perfume..."
+            >
+
+            <select id="filter-category">
+                <option value="all">All Collections</option>
+                <option value="women">Women</option>
+                <option value="men">Men</option>
+                <option value="unisex">Unisex</option>
+            </select>
+
+            <select id="sort-price">
+                <option value="default">Sort By</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+            </select>
+
+        </section>
+
+        <section class="shop-products">
+            <div class="product-grid" id="shop-product-grid">
+                <!-- Produk akan ditampilkan melalui JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <h2>NADÉA PARFUM</h2>
+        <p>A Scent Called You.</p>
+        <p>© 2026 NADÉA PARFUM. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/products.js"></script>
+
+</body>
+</html>

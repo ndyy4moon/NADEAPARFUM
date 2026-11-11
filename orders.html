@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders | NADÉA PARFUM</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: #fffaf8;
+        }
+
+        .orders-container {
+            max-width: 1050px;
+            margin: 65px auto;
+            padding: 25px;
+            min-height: 55vh;
+        }
+
+        .orders-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .orders-heading p {
+            color: #b77b86;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 4px;
+        }
+
+        .orders-heading h1 {
+            font-family: 'Playfair Display', serif;
+            color: #553d42;
+            margin-top: 12px;
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+        .order-card {
+            background: #fff;
+            border: 1px solid #f0dfdc;
+            padding: 28px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .order-card:hover {
+            border-color: #d8b3b5;
+        }
+
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            border-bottom: 1px solid #f0e5e2;
+            padding-bottom: 18px;
+            margin-bottom: 22px;
+        }
+
+        .order-header h3 {
+            font-family: 'Playfair Display', serif;
+            color: #553d42;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .order-status {
+            color: #a66f79;
+            background: #fbf0f0;
+            padding: 8px 14px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 20px;
+        }
+
+        .order-info p {
+            margin-bottom: 12px;
+            color: #806b6d;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .order-products {
+            background: #fffaf8;
+            padding: 20px;
+            margin: 22px 0;
+            border: 1px solid #f4e9e6;
+        }
+
+        .order-product {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 14px;
+            color: #806b6d;
+            font-size: 13px;
+        }
+
+        .order-product:last-child {
+            margin-bottom: 0;
+        }
+
+        .order-total {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            border-top: 1px solid #eadbd7;
+            padding-top: 20px;
+            margin-top: 20px;
+            font-weight: 700;
+            color: #553d42;
+            font-size: 17px;
+        }
+
+        .empty-orders {
+            text-align: center;
+            padding: 75px 20px;
+            background: #fff;
+            border: 1px solid #f0dfdc;
+            color: #806b6d;
+        }
+
+        .empty-orders h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            color: #553d42;
+            margin-bottom: 12px;
+        }
+
+        .empty-orders p {
+            font-size: 13px;
+        }
+
+        .empty-orders a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 28px;
+            background: #b77b86;
+            color: white;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .empty-orders a:hover {
+            background: #8e5d67;
+        }
+
+        @media (max-width: 600px) {
+            .orders-container {
+                padding: 15px;
+            }
+
+            .orders-heading h1 {
+                font-size: 33px;
+            }
+
+            .order-card {
+                padding: 20px;
+            }
+
+            .order-header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="announcement">
+        Discover Your Signature Scent ✨
+    </div>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="img/logo-nadea.png" alt="NADÉA PARFUM">
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">My Bag</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="orders.html">My Orders</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main class="orders-container">
+
+        <div class="orders-heading">
+            <p>YOUR PURCHASE HISTORY</p>
+            <h1>My Orders</h1>
+        </div>
+
+        <div id="orders-list"></div>
+
+    </main>
+
+    <footer id="contact">
+        <h2>NADÉA PARFUM</h2>
+        <p>A Scent Called You.</p>
+        <p>© 2026 NADÉA PARFUM. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/orders.js"></script>
+
+</body>
+</html>

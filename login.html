@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | NADÉA PARFUM</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            min-height: 100vh;
+            background: #fffaf8;
+        }
+
+        .auth-navbar {
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fffaf8;
+        }
+
+        .auth-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            letter-spacing: 3px;
+            color: #593b3b;
+            text-decoration: none;
+        }
+
+        .auth-logo span {
+            color: #b77b86;
+        }
+
+        .auth-navbar a:last-child {
+            color: #9f6971;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .auth-wrapper {
+            max-width: 1050px;
+            min-height: 570px;
+            margin: 45px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: white;
+            border: 1px solid #f0e2df;
+            box-shadow: 0 15px 45px rgba(74, 53, 57, 0.08);
+        }
+
+        .auth-visual {
+            background:
+                linear-gradient(rgba(75, 43, 48, 0.18), rgba(75, 43, 48, 0.35)),
+                url('img/nadea-hero.png') center/cover;
+            min-height: 530px;
+            display: flex;
+            align-items: flex-end;
+            padding: 40px;
+            color: white;
+        }
+
+        .auth-visual h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+
+        .auth-visual p {
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .auth-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 45px;
+        }
+
+        .auth-heading {
+            margin-bottom: 35px;
+        }
+
+        .auth-heading p {
+            color: #b77b86;
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin-bottom: 14px;
+        }
+
+        .auth-heading h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 500;
+            color: #553d42;
+            margin-bottom: 12px;
+        }
+
+        .auth-heading span {
+            font-size: 13px;
+            color: #8d777b;
+        }
+
+        .auth-form label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #593b3b;
+            margin-bottom: 9px;
+        }
+
+        .auth-form input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #eadbd7;
+            background: #fffaf8;
+            margin-bottom: 22px;
+            outline: none;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+        }
+
+        .auth-form input:focus {
+            border-color: #b77b86;
+        }
+
+        .auth-button {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            background: #a96f79;
+            color: white;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .auth-button:hover {
+            background: #70474f;
+        }
+
+        .auth-switch {
+            text-align: center;
+            margin-top: 25px;
+            color: #8d777b;
+            font-size: 12px;
+        }
+
+        .auth-switch a {
+            color: #a66e78;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .auth-footer {
+            text-align: center;
+            padding: 15px;
+            color: #a58c8e;
+            font-size: 11px;
+        }
+
+        @media (max-width: 700px) {
+            .auth-wrapper {
+                grid-template-columns: 1fr;
+                margin: 20px 15px;
+                padding: 12px;
+            }
+
+            .auth-visual {
+                min-height: 220px;
+                padding: 25px;
+            }
+
+            .auth-visual h2 {
+                font-size: 28px;
+            }
+
+            .auth-content {
+                padding: 35px 20px;
+            }
+
+            .auth-heading h1 {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="auth-navbar">
+        <a href="index.html" class="auth-logo">
+            NADÉA <span>PARFUM</span>
+        </a>
+
+        <a href="index.html">← Back to Home</a>
+    </header>
+
+    <main class="auth-wrapper">
+
+        <section class="auth-visual">
+            <div>
+                <p>THE ART OF PERSONAL FRAGRANCE</p>
+                <h2>A Scent<br>Called You.</h2>
+                <p>Discover the fragrance that defines you.</p>
+            </div>
+        </section>
+
+        <section class="auth-content">
+
+            <div class="auth-heading">
+                <p>WELCOME BACK</p>
+                <h1>Sign In</h1>
+                <span>Masuk dan temukan kembali aroma favoritmu.</span>
+            </div>
+
+            <form class="auth-form" id="login-form">
+
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    required
+                    placeholder="Masukkan email kamu"
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    required
+                    placeholder="Masukkan password"
+                >
+
+                <button type="submit" class="auth-button">
+                    SIGN IN
+                </button>
+
+            </form>
+
+            <div class="auth-switch">
+                Belum punya akun?
+                <a href="register.html">Create Account</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="auth-footer">
+        © 2026 NADÉA PARFUM. All Rights Reserved.
+    </footer>
+
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

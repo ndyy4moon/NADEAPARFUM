@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Detail | NADÉA PARFUM</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: #fffaf8;
+        }
+
+        /* DETAIL CONTAINER */
+
+        .detail-container {
+            max-width: 1150px;
+            margin: 65px auto;
+            padding: 30px 35px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        /* PRODUCT IMAGE */
+
+        .detail-image-wrapper {
+            background: #fff3f0;
+            padding: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 450px;
+        }
+
+        .detail-container img {
+            width: 100%;
+            max-width: 330px;
+            height: 370px;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* PRODUCT INFORMATION */
+
+        .detail-info {
+            padding: 20px 0;
+        }
+
+        .detail-info > p:first-child {
+            color: #b77b86;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .detail-info h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 39px;
+            font-weight: 500;
+            color: #553d42;
+            margin-bottom: 18px;
+        }
+
+        .detail-info p {
+            color: #927c80;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        #detail-category {
+            display: inline-block;
+            background: #f8e9e7;
+            color: #a66e78;
+            padding: 7px 15px;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        .detail-price {
+            font-size: 27px;
+            font-weight: 600;
+            color: #a66e78;
+            margin: 25px 0;
+        }
+
+        /* BUTTONS */
+
+        .detail-info button {
+            padding: 14px 23px;
+            margin: 5px 5px 5px 0;
+            border: 1px solid #b77b86;
+            background: #b77b86;
+            color: white;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .detail-info button:hover {
+            background: #8e5d67;
+            border-color: #8e5d67;
+        }
+
+        .detail-info .wishlist-button {
+            background: transparent;
+            color: #a66e78;
+        }
+
+        .detail-info .wishlist-button:hover {
+            background: #f8e9e7;
+            color: #8e5d67;
+        }
+
+        /* BACK LINK */
+
+        .detail-info a {
+            display: inline-block;
+            color: #a66e78;
+            font-size: 13px;
+            text-decoration: none;
+            margin-top: 25px;
+        }
+
+        .detail-info a:hover {
+            color: #553d42;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 768px) {
+            .detail-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin: 30px auto;
+                padding: 20px;
+            }
+
+            .detail-image-wrapper {
+                min-height: 350px;
+                padding: 20px;
+            }
+
+            .detail-container img {
+                height: 290px;
+            }
+
+            .detail-info h1 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .detail-container {
+                padding: 15px;
+            }
+
+            .detail-image-wrapper {
+                min-height: 280px;
+            }
+
+            .detail-container img {
+                height: 230px;
+            }
+
+            .detail-info h1 {
+                font-size: 28px;
+            }
+
+            .detail-info button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="announcement">
+        Discover Your Signature Scent ✨
+    </div>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="img/logo-nadea.png" alt="NADÉA PARFUM">
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">My Bag</a>
+            <a href="orders.html">My Orders</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main class="detail-container">
+
+        <div class="detail-image-wrapper">
+            <img id="detail-image" src="img/logo-nadea.png" alt="Product perfume">
+        </div>
+
+        <div class="detail-info">
+
+            <p>NADÉA PARFUM COLLECTION</p>
+
+            <h1 id="detail-name">Product Name</h1>
+
+            <p id="detail-description"></p>
+
+            <p id="detail-category"></p>
+
+            <div class="detail-price" id="detail-price"></div>
+
+            <button id="detail-add-cart">ADD TO BAG</button>
+
+            <button class="wishlist-button" id="detail-wishlist">
+                ADD TO WISHLIST ♡
+            </button>
+
+            <p>
+                <a href="shop.html">← Back to Collection</a>
+            </p>
+
+        </div>
+
+    </main>
+
+    <footer id="contact">
+        <h2>NADÉA PARFUM</h2>
+        <p>A Scent Called You.</p>
+        <p>© 2026 NADÉA PARFUM. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/detail.js"></script>
+
+</body>
+</html>
